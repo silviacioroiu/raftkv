@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420" role="img" aria-labelledby="t d">
+<title id="t">Throughput by number of concurrent clients</title>
+<desc id="d">Operations per second, 50% Put / 50% Get, fsync on. 3 nodes: 1 1,044 ops/s, 4 2,151 ops/s, 16 3,956 ops/s, 64 10,925 ops/s. 5 nodes: 1 844 ops/s, 4 2,007 ops/s, 16 3,687 ops/s, 64 9,125 ops/s. 7 nodes: 1 817 ops/s, 4 1,825 ops/s, 16 3,526 ops/s, 64 8,122 ops/s</desc>
+<style>
+  :root { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+          --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+            --s1:#3987e5; --s2:#d95926; --s3:#199e70; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .surface { fill: var(--surface); }
+  .title { font-size: 16px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .legend, .direct { font-size: 12px; fill: var(--ink2); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .axis-title { font-size: 12px; fill: var(--ink2); }
+  .value { font-size: 11px; fill: var(--ink2); font-variant-numeric: tabular-nums; }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .base { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+  .c1 { stroke: var(--s1); } .c2 { stroke: var(--s2); } .c3 { stroke: var(--s3); }
+  .f1 { fill: var(--s1); } .f2 { fill: var(--s2); } .f3 { fill: var(--s3); }
+</style>
+<rect class="surface" width="720" height="420" rx="8"/>
+<text class="title" x="24" y="34">Throughput by number of concurrent clients</text>
+<text class="subtitle" x="24" y="54">Operations per second, 50% Put / 50% Get, fsync on</text>
+<line class="line c1" x1="24.0" y1="74" x2="40.0" y2="74"/><circle class="dot f1" cx="32.0" cy="74" r="4"/><text class="legend" x="46.0" y="78">3 nodes</text>
+<line class="line c2" x1="114.2" y1="74" x2="130.2" y2="74"/><circle class="dot f2" cx="122.2" cy="74" r="4"/><text class="legend" x="136.2" y="78">5 nodes</text>
+<line class="line c3" x1="204.4" y1="74" x2="220.4" y2="74"/><circle class="dot f3" cx="212.4" cy="74" r="4"/><text class="legend" x="226.4" y="78">7 nodes</text>
+<text class="tick" x="56" y="368.0" text-anchor="end">0</text>
+<line class="grid" x1="64" y1="277.3" x2="604" y2="277.3"/><text class="tick" x="56" y="281.3" text-anchor="end">5,000</text>
+<line class="grid" x1="64" y1="190.7" x2="604" y2="190.7"/><text class="tick" x="56" y="194.7" text-anchor="end">10,000</text>
+<line class="grid" x1="64" y1="104.0" x2="604" y2="104.0"/><text class="tick" x="56" y="108.0" text-anchor="end">15,000</text>
+<line class="base" x1="64" y1="364" x2="604" y2="364"/>
+<text class="tick" x="84.0" y="382" text-anchor="middle">1</text>
+<text class="tick" x="250.7" y="382" text-anchor="middle">4</text>
+<text class="tick" x="417.3" y="382" text-anchor="middle">16</text>
+<text class="tick" x="584.0" y="382" text-anchor="middle">64</text>
+<text class="axis-title" x="334.0" y="406" text-anchor="middle">Concurrent clients</text>
+<path class="line c1" d="M84.0 345.9 L250.7 326.7 L417.3 295.4 L584.0 174.6"/>
+<path class="line c2" d="M84.0 349.4 L250.7 329.2 L417.3 300.1 L584.0 205.8"/>
+<path class="line c3" d="M84.0 349.8 L250.7 332.4 L417.3 302.9 L584.0 223.2"/>
+<circle class="dot f1" cx="84.0" cy="345.9" r="4"><title>3 nodes, 1 concurrent clients: 1,044 ops/s</title></circle>
+<circle class="dot f1" cx="250.7" cy="326.7" r="4"><title>3 nodes, 4 concurrent clients: 2,151 ops/s</title></circle>
+<circle class="dot f1" cx="417.3" cy="295.4" r="4"><title>3 nodes, 16 concurrent clients: 3,956 ops/s</title></circle>
+<circle class="dot f1" cx="584.0" cy="174.6" r="4"><title>3 nodes, 64 concurrent clients: 10,925 ops/s</title></circle>
+<circle class="dot f2" cx="84.0" cy="349.4" r="4"><title>5 nodes, 1 concurrent clients: 844 ops/s</title></circle>
+<circle class="dot f2" cx="250.7" cy="329.2" r="4"><title>5 nodes, 4 concurrent clients: 2,007 ops/s</title></circle>
+<circle class="dot f2" cx="417.3" cy="300.1" r="4"><title>5 nodes, 16 concurrent clients: 3,687 ops/s</title></circle>
+<circle class="dot f2" cx="584.0" cy="205.8" r="4"><title>5 nodes, 64 concurrent clients: 9,125 ops/s</title></circle>
+<circle class="dot f3" cx="84.0" cy="349.8" r="4"><title>7 nodes, 1 concurrent clients: 817 ops/s</title></circle>
+<circle class="dot f3" cx="250.7" cy="332.4" r="4"><title>7 nodes, 4 concurrent clients: 1,825 ops/s</title></circle>
+<circle class="dot f3" cx="417.3" cy="302.9" r="4"><title>7 nodes, 16 concurrent clients: 3,526 ops/s</title></circle>
+<circle class="dot f3" cx="584.0" cy="223.2" r="4"><title>7 nodes, 64 concurrent clients: 8,122 ops/s</title></circle>
+<text class="direct" x="596.0" y="178.6">3 nodes</text>
+<text class="direct" x="596.0" y="209.8">5 nodes</text>
+<text class="direct" x="596.0" y="227.2">7 nodes</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420" role="img" aria-labelledby="t d">
+<title id="t">Request latency by cluster size</title>
+<desc id="d">Milliseconds per request with 16 concurrent clients. p50: 3 nodes 3.95 ms, 5 nodes 4.09 ms, 7 nodes 4.28 ms. p99: 3 nodes 9.38 ms, 5 nodes 11.2 ms, 7 nodes 9.74 ms</desc>
+<style>
+  :root { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+          --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+            --s1:#3987e5; --s2:#d95926; --s3:#199e70; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .surface { fill: var(--surface); }
+  .title { font-size: 16px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .legend, .direct { font-size: 12px; fill: var(--ink2); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .axis-title { font-size: 12px; fill: var(--ink2); }
+  .value { font-size: 11px; fill: var(--ink2); font-variant-numeric: tabular-nums; }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .base { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+  .c1 { stroke: var(--s1); } .c2 { stroke: var(--s2); } .c3 { stroke: var(--s3); }
+  .f1 { fill: var(--s1); } .f2 { fill: var(--s2); } .f3 { fill: var(--s3); }
+</style>
+<rect class="surface" width="720" height="420" rx="8"/>
+<text class="title" x="24" y="34">Request latency by cluster size</text>
+<text class="subtitle" x="24" y="54">Milliseconds per request with 16 concurrent clients</text>
+<rect class="f1" x="24.0" y="69" width="10" height="10" rx="2"/><text class="legend" x="40.0" y="78">p50</text>
+<rect class="f2" x="81.8" y="69" width="10" height="10" rx="2"/><text class="legend" x="97.8" y="78">p99</text>
+<text class="tick" x="56" y="368.0" text-anchor="end">0</text>
+<line class="grid" x1="64" y1="277.3" x2="604" y2="277.3"/><text class="tick" x="56" y="281.3" text-anchor="end">5</text>
+<line class="grid" x1="64" y1="190.7" x2="604" y2="190.7"/><text class="tick" x="56" y="194.7" text-anchor="end">10</text>
+<line class="grid" x1="64" y1="104.0" x2="604" y2="104.0"/><text class="tick" x="56" y="108.0" text-anchor="end">15</text>
+<line class="base" x1="64" y1="364" x2="604" y2="364"/>
+<text class="tick" x="154.0" y="382" text-anchor="middle">3 nodes</text>
+<text class="tick" x="334.0" y="382" text-anchor="middle">5 nodes</text>
+<text class="tick" x="514.0" y="382" text-anchor="middle">7 nodes</text>
+<text class="axis-title" x="334.0" y="406" text-anchor="middle">Cluster size</text>
+<path class="f1" d="M129.0 364 L129.0 299.6 Q129.0 295.6 133.0 295.6 L149.0 295.6 Q153.0 295.6 153.0 299.6 L153.0 364 Z"><title>3 nodes, p50: 3.95 ms</title></path><text class="value" x="141.0" y="289.6" text-anchor="middle">3.95</text>
+<path class="f2" d="M155.0 364 L155.0 205.4 Q155.0 201.4 159.0 201.4 L175.0 201.4 Q179.0 201.4 179.0 205.4 L179.0 364 Z"><title>3 nodes, p99: 9.38 ms</title></path><text class="value" x="167.0" y="195.4" text-anchor="middle">9.38</text>
+<path class="f1" d="M309.0 364 L309.0 297.1 Q309.0 293.1 313.0 293.1 L329.0 293.1 Q333.0 293.1 333.0 297.1 L333.0 364 Z"><title>5 nodes, p50: 4.09 ms</title></path><text class="value" x="321.0" y="287.1" text-anchor="middle">4.09</text>
+<path class="f2" d="M335.0 364 L335.0 174.0 Q335.0 170.0 339.0 170.0 L355.0 170.0 Q359.0 170.0 359.0 174.0 L359.0 364 Z"><title>5 nodes, p99: 11.2 ms</title></path><text class="value" x="347.0" y="164.0" text-anchor="middle">11.2</text>
+<path class="f1" d="M489.0 364 L489.0 293.7 Q489.0 289.7 493.0 289.7 L509.0 289.7 Q513.0 289.7 513.0 293.7 L513.0 364 Z"><title>7 nodes, p50: 4.28 ms</title></path><text class="value" x="501.0" y="283.7" text-anchor="middle">4.28</text>
+<path class="f2" d="M515.0 364 L515.0 199.2 Q515.0 195.2 519.0 195.2 L535.0 195.2 Q539.0 195.2 539.0 199.2 L539.0 364 Z"><title>7 nodes, p99: 9.74 ms</title></path><text class="value" x="527.0" y="189.2" text-anchor="middle">9.74</text>
+</svg>

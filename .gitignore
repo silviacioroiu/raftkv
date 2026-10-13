@@ -1,0 +1,15 @@
+# Build output
+/bin/
+*.exe
+*.test
+*.out
+*.prof
+
+# Data directories of a locally running cluster
+/data/
+
+# Local toolchain
+/.tools/
+
+# Reports written by failing chaos tests
+violation-*.html
